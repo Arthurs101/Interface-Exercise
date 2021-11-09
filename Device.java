@@ -24,8 +24,9 @@ public abstract class Device {
     }
     
     public String getName(){
-		return NAME;
-	}
+        return NAME;
+    }
+    public abstract String Interact();
     
     
 }
