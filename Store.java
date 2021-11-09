@@ -1,5 +1,5 @@
 
-
+import java.util.ArrayList;
 public class Store{
 	private String name;
 	private String adress;
@@ -9,11 +9,11 @@ public class Store{
 	
 	
 	public Store(String name, String adress, String country, String city, ArrayList<Device> productos){
-		this.name = name;
-        this.adress = adress;
-        this.country = country;
-        this.city = city;
-        this.inventario = productos;
+            this.name = name;
+            this.adress = adress;
+            this.country = country;
+            this.city = city;
+            this.inventario = productos;
 	}
 	
 	public String getName(){
