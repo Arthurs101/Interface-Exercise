@@ -23,7 +23,9 @@ public abstract class Device {
         return me;
     }
     
-    
+    public String getName(){
+		return NAME;
+	}
     
     
 }
