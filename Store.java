@@ -6,8 +6,6 @@ public class Store{
 	private String country;
 	private String city;
 	private ArrayList<Device> inventario;
-	
-	
 	public Store(String name, String adress, String country, String city, ArrayList<Device> productos){
             this.name = name;
             this.adress = adress;

@@ -19,13 +19,24 @@ public abstract class Device {
     }
     
     public String[] getData(){
-        String[] me = new  String[7];
+        String[] me = new  String[6];
+        me[0] = NAME;
+        me[1] = manufacturer;
+        me[2] = serialNumber;
+        me[3] = "fecha de producción: " + productionDate;
+        me[4] = "código: " + markerAR;
+        me[5] = "Precio: Q" + String.valueOf(price);
         return me;
     }
     
-    public String getName(){
+    public String getType(){
+        return deviceType;
+    }
+
+    public String getNAME() {
         return NAME;
     }
+    
     public abstract String Interact();
     
     

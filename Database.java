@@ -17,7 +17,7 @@ public class Database{
         ArrayList<Store> Stores  = new ArrayList<>();
         JSONParser Stored = new JSONParser();//lector del arvhivo JSON
         try{
-            JSONArray json = (JSONArray) Stored.parse(new FileReader("D:\\Programas\\EShopping\\" + "DATA.json"));
+            JSONArray json = (JSONArray) Stored.parse(new FileReader(directory + "DATA.json"));
             for(Object store: json){
                 //crear el objeto referente a las tiendas
                 JSONObject STORE = (JSONObject) store;
@@ -76,9 +76,12 @@ public class Database{
                             break;
                     }
                 }
+                Store shop = new Store((String) STORE.get("name"), (String) STORE.get("adress"), (String) STORE.get("country"), (String) STORE.get("city"), products);
+                Stores.add(shop);
             }
         }catch(FileNotFoundException nf){
-            System.out.println("Directorio Erróneo");
+            System.out.println("Directorio Erróneo, cerrando programa");
+            System.exit(0);
         } catch (ParseException ex) {
             System.out.println("Error, el archivo está dañado");
             System.out.println("Intente regresar al estado original el archivo e intente de nuevo");

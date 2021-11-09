@@ -7,25 +7,25 @@ public class Tablet extends Device implements Web,Media,Portable{
 	
 
 	
-	public String AbrirPagina(String a){
-		String n = ("La tablet " + NAME + " esta mostrando la direccion web " + a + ".");
-		return n;	
-	}
-	
-	public String tomarFotos(){
-		String n = ("La tablet " + NAME + " ha tomado una foto.");
-		return n;	
-	}
-	
-	public String playVideo(){
-		String n = ("La tablet " + NAME + " esta mostrando un video.");
-		return n;	
-	}
-	
-	public String Mover(){
-		String n = ("La tablet " + NAME + " ha sido movido.");
-		return n;	
-	}
+    public String AbrirPagina(String a){
+            String n = ("La tablet " + NAME + " esta mostrando la direccion web " + a + ".");
+            return n;	
+    }
+
+    public String tomarFotos(){
+            String n = ("La tablet " + NAME + " ha tomado una foto.");
+            return n;	
+    }
+
+    public String playVideo(){
+            String n = ("La tablet " + NAME + " esta mostrando un video.");
+            return n;	
+    }
+
+    public String Mover(){
+            String n = ("La tablet " + NAME + " ha sido movido.");
+            return n;	
+    }
 
     @Override
     public String Interact() {
