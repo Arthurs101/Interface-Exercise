@@ -1,0 +1,200 @@
+[
+    {
+        "name": "Electronica Latam Outlet",
+        "adress":"7ma calle zona 10",
+        "country": "Belice",
+        "city":"Belmopán",
+        "products":[
+            {
+                "name":"Poco X3 Pro",
+                "type":"smartphone",
+                "barcode":"1234567",
+                "fabric":"11/03/2021",
+                "brand":"Xiaomi",
+                "Model":"IMEI:200219804",
+                "price": 3500.00
+            },
+            {
+                "name":"Z3 Pro",
+                "type":"smartphone",
+                "barcode":"0987636",
+                "fabric":"11/03/2020",
+                "brand":"Samsung",
+                "Model":"SZ3P: 94846367495",
+                "price": 2000.00
+            },
+            {
+                "name":"C3",
+                "type":"cellphone",
+                "barcode":"0897654",
+                "fabric":"21/05/2020",
+                "brand":"NOKIA",
+                "Model":"NC3K7393MLU",
+                "price": 1000.00
+            },
+            {
+                "name":"B15",
+                "type":"smartphone",
+                "barcode":"0987612",
+                "fabric":"10/08/2020",
+                "brand":"CAT",
+                "Model":"CATB15USA0087",
+                "price": 500.00
+            },
+            {
+                "name":"M1 Premiere",
+                "type":"phone",
+                "barcode":"0987634",
+                "fabric":"11/03/2010",
+                "brand":"Wingston",
+                "Model":"PRWIN12345GT",
+                "price": 80.00
+            },
+            {
+                "name":"Galaxy tab 3",
+                "type":"tablet",
+                "barcode":"0987636",
+                "fabric":"11/03/2010",
+                "brand":"Samsung",
+                "Model":"GLSAMSUNGTAB3",
+                "price": 1080.00
+            },
+            {
+                "name":"Experia 10",
+                "type":"TV",
+                "barcode":"097364",
+                "fabric":"10/08/2021",
+                "brand":"Sony",
+                "Model":"PRWIN12244",
+                "price": 50000.00
+            },
+            {
+                "name":"OMEN 015",
+                "type":"Laptop",
+                "barcode":"1234566",
+                "fabric":"30/02/2021",
+                "brand":"HP",
+                "Model":"HPO015KLM02",
+                "price": 15000.00
+            }
+        
+        ]
+    },
+    {
+        "name": "Electronica Latam Central",
+        "adress":"zona 1 10ma avenida",
+        "country": "Guatemala",
+        "city":"Guatemala",
+        "products":[
+            {
+                "name":"Poco X3 Pro",
+                "type":"smartphone",
+                "barcode":"1234567",
+                "fabric":"11/03/2021",
+                "brand":"Xiaomi",
+                "Model":"IMEI:200219804",
+                "price": 3500.00
+            },
+            {
+                "name":"Z3 Pro",
+                "type":"smartphone",
+                "barcode":"0987636",
+                "fabric":"11/03/2020",
+                "brand":"Samsung",
+                "Model":"SZ3P: 94846367495",
+                "price": 2000.00
+            },
+            {
+                "name":"C3",
+                "type":"cellphone",
+                "barcode":"0897654",
+                "fabric":"21/05/2020",
+                "brand":"NOKIA",
+                "Model":"NC3K7393MLU",
+                "price": 1000.00
+            },
+            {
+                "name":"B15",
+                "type":"smartphone",
+                "barcode":"0987612",
+                "fabric":"10/08/2020",
+                "brand":"CAT",
+                "Model":"CATB15USA0087",
+                "price": 500.00
+            },
+            {
+                "name":"M1 Premiere",
+                "type":"phone",
+                "barcode":"0987634",
+                "fabric":"11/03/2010",
+                "brand":"Wingston",
+                "Model":"PRWIN12345GT",
+                "price": 80.00
+            },
+            {
+                "name":"Galaxy tab 3",
+                "type":"tablet",
+                "barcode":"0987636",
+                "fabric":"11/03/2010",
+                "brand":"Samsung",
+                "Model":"GLSAMSUNGTAB3",
+                "price": 1080.00
+            },
+            {
+                "name":"Experia 10",
+                "type":"TV",
+                "barcode":"097364",
+                "fabric":"10/08/2021",
+                "brand":"Sony",
+                "Model":"PRWIN12244",
+                "price": 50000.00
+            },
+            {
+                "name":"OMEN 015",
+                "type":"Laptop",
+                "barcode":"1234566",
+                "fabric":"30/02/2021",
+                "brand":"HP",
+                "Model":"HPO015KLM02",
+                "price": 15000.00
+            },
+            {
+                "name":"Pavilion",
+                "type":"Laptop",
+                "barcode":"0987651",
+                "fabric":"30/02/2021",
+                "brand":"HP",
+                "Model":"HPO015PKL02",
+                "price": 8000.00
+            },    
+            {
+                "name":"Pavilion",
+                "type":"Laptop",
+                "barcode":"0987651",
+                "fabric":"30/02/2021",
+                "brand":"HP",
+                "Model":"HPO015PKL02",
+                "price": 8000.00
+            },
+            {
+                "name":"Gladiator Gaming PC",
+                "type":"Desktop",
+                "barcode":"0987651",
+                "fabric":"30/02/2021",
+                "brand":"ABS",
+                "Model":"HPO015PKL02",
+                "price": 20000.00
+            },
+            {
+                "name":"Gladiator Gaming PC",
+                "type":"Desktop",
+                "barcode":"0987651",
+                "fabric":"30/02/2021",
+                "brand":"ABS",
+                "Model":"HPO015PKL02",
+                "price": 20000.00
+            }
+        
+        ]
+    }
+]
