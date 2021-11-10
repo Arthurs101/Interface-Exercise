@@ -66,7 +66,6 @@ public class Database{
                             products.add(lp);
                             break;
                         case "Desktop":
-                            type = "Computadora de Escritorio";
                             PCDes pc = new PCDes(price, model, brand, fdate, barcode,type, name);
                             products.add(pc);
                             break;
