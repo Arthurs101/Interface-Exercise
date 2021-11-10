@@ -39,8 +39,8 @@ public abstract class Device {
     
     public abstract String Interact();
     
-	public String getPrecio() {
-        return price;
+    public double getPrecio() {
+    return price;
     }
 	
 	public String getFecha() {

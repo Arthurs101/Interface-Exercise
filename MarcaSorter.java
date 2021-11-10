@@ -1,6 +1,6 @@
 
 
-import java.util.Comparator
+import java.util.Comparator;
 public class MarcaSorter implements Comparator<Device>{
 
 	public int compare(Device a, Device b) {

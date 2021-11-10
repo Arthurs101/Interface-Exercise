@@ -22,11 +22,16 @@ public class Display {
         return intscan.nextInt();
     }
     public String[] CostumerData(){
-        String[] costumerData = new String[2];
+        String[] costumerData = new String[3];
         System.out.println("ingrese su nombre");
         costumerData[0] = strscan.nextLine();
         System.out.println("ingrese la fecha de hoy dia/mes/año");
         costumerData[1] = strscan.nextLine();
+        System.out.println("seleccione el tipo de ordenamiento de su factura");
+        System.out.println("1. por precio");
+        System.out.println("2. por fecha");
+        System.out.println("3. por marca");
+        costumerData[2] = String.valueOf(intscan.nextInt());
         return costumerData;
     }
     public int search(){

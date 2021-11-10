@@ -1,16 +1,19 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Comparator;
 public class Carrito{
-	private ArrayList<Device> compra;
+	private ArrayList<Device> compra = new ArrayList<>();
         private String client;
         private String date;
         private Random r = new Random();
+        private final int sortype;
 
-    public Carrito(String client, String date) {
+    public Carrito(String client, String date,int sortype) {
         this.client = client;
         this.date = date;
+        this.sortype = sortype;
     }
         
 	
@@ -27,21 +30,20 @@ public class Carrito{
     }
     
     public void sort(int i){
-		//sortear por precio
-		if (i == 1){
-			compra.sort(new PriceSorter());
-			return compra;
-		}
-		//sortear por fecha
-		else if (i == 2){
-			compra.sort( new FechaSorter());
-			return compra;
-		}
-		
-		else if (i == 3){
-			compra.sort( new MarcaSorter());
-			return compra;
-		}
+        //sortear por precio
+        if (i == 1){
+            compra.sort(new PriceSorter());
+        }
+        //sortear por fecha
+        
+        else if (i == 2){
+            compra.sort( new FechaSorter());
+        }
+
+        else if (i == 3){
+            compra.sort( new MarcaSorter());
+        }
+        
     }
     
     public ArrayList<Device> getBuy(){
@@ -50,10 +52,20 @@ public class Carrito{
 
     //para la factura
     public String pay(){
-        String bill = "Factura no: " + String.valueOf(r.nextInt(10000));
-        bill += "cliente: " + client + "- Fecha: " + date ;
-        //aca iría el for para todos los objetos
+        String bill = "Factura no: " + String.valueOf(r.nextInt(10000)) + " ";
+        sort(sortype);
+        bill += "cliente: " + client + "- Fecha: " + date + "\n";
+        for(Device item: compra){
+            String[] item_data = item.getData();
+            String information = "";
+            for(String info: item_data){
+                information+= info + "-";
+            }
+           bill += (String.valueOf(compra.indexOf(item) +1 ) + ". " + information ) +"\n";
+        }
         return bill;
     }
+    
+    
         
 }

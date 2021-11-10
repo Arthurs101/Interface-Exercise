@@ -1,9 +1,14 @@
 
-import java.util.Comparator
+import java.util.Comparator;
 public class PriceSorter implements Comparator<Device>{
-	
-	public int compare(Device a, Device b) {
-		return b.getPrecio().compareToIgnoreCase(a.getPrecio());
-	}
+
+    
+    @Override
+    public int compare(Device a, Device b) {
+        int roundedpriceA = (int) a.getPrecio();
+        int roudedpriceB = (int) b.getPrecio();
+        return Integer.valueOf(roundedpriceA).compareTo(roudedpriceB);
+    }
+    
 	
 }
