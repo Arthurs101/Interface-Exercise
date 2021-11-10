@@ -24,7 +24,42 @@ public class Camara extends Device implements Portable,Media{
 
     @Override
     public String Interact() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         String opcion = 0;
+        while (opcion != 4){ 
+			System.out.println("");
+			System.out.println("Interacciones posibles con Camara fotografica");
+			System.out.println("Escoja una opcion");
+			System.out.println("1. Tomar foto");
+			System.out.println("2. Ver video");
+			System.out.println("3. Mover");
+			System.out.println("4. Salir");
+			
+			while (true) {
+				try{
+					opcion = scan.nextInt(); 
+					break;
+				}
+				catch (Exception e) {
+					System.err.println("Por favor ingrese una opcion valida");
+					scan.next();
+					continue;
+				}
+			}
+			switch (opcion) {
+				case 1:
+					tomarFotos();
+					break;
+				case 2:
+					playVideo();
+					break;
+				case 3:
+					mover();
+					break;
+				case 4:
+					System.out.println("Se ha dejado de interactuar con el Computador Personal");
+					break;	
+			}
+		}
     }
 
 

@@ -25,7 +25,50 @@ public class SmartTV extends Device implements Web,Media{
 
     @Override
     public String Interact() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String opcion = 0;
+        while (opcion != 3){ 
+			System.out.println("");
+			System.out.println("Interacciones posibles con SmartTV");
+			System.out.println("Escoja una opcion");
+			System.out.println("1. Abrir pagina web");
+			System.out.println("4. Ver video");
+			System.out.println("3. Salir");
+			
+			while (true) {
+				try{
+					opcion = scan.nextInt(); 
+					break;
+				}
+				catch (Exception e) {
+					System.err.println("Por favor ingrese una opcion valida");
+					scan.next();
+					continue;
+				}
+			}
+			switch (opcion) {
+				case 1:
+					String pagina = "";
+					while (true) {
+						System.out.println("Que pagina web desea visitar?");
+						try{
+							pagina = scan.next();
+						}
+						catch (Exception e) {
+						System.err.println("Por favor ingrese una opcion valida");
+						scan.next();
+						continue;
+						}
+					}
+					AbrirPagina(pagina);
+					break;
+				case 2:
+					playVideo();
+					break;
+				case 3:
+					System.out.println("Se ha dejado de interactuar con el SmartTV");
+					break;
+			}
+		}
     }
 	
 	

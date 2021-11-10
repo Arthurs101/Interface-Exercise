@@ -14,7 +14,50 @@ public class TelCel extends TelFijo implements Portable{
 
     @Override
     public String Interact() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String opcion = 0;
+        while (opcion != 3){ 
+			System.out.println("");
+			System.out.println("Interacciones posibles con Telefono Celular");
+			System.out.println("Escoja una opcion");
+			System.out.println("1. Llamar");
+			System.out.println("2. Mover");
+			System.out.println("3. Salir");
+			
+			while (true) {
+				try{
+					opcion = scan.nextInt(); 
+					break;
+				}
+				catch (Exception e) {
+					System.err.println("Por favor ingrese una opcion valida");
+					scan.next();
+					continue;
+				}
+			}
+			switch (opcion) {
+				case 1:
+					String number = "";
+					while (true) {
+						System.out.println("A que numero desea llamar?");
+						try{
+							number = scan.next();
+						}
+						catch (Exception e) {
+						System.err.println("Por favor ingrese una opcion valida");
+						scan.next();
+						continue;
+						}
+					}
+					Llamar(number);
+					break;
+				case 2:
+					mover();
+					break;
+				case 3:
+					System.out.println("Se ha dejado de interactuar con el Telefono Celular");
+					break;
+			}
+		}
     }
 
    

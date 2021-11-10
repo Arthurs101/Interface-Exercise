@@ -28,7 +28,66 @@ public class PCDes extends Device implements Web,Media,Gaming{
 
     @Override
     public String Interact() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String opcion = 0;
+        while (opcion != 4){ 
+			System.out.println("");
+			System.out.println("Interacciones posibles con Computador Personal");
+			System.out.println("Escoja una opcion");
+			System.out.println("1. Abrir pagina web");
+			System.out.println("2. Ver video");
+			System.out.println("3. Jugar videojuego");
+			System.out.println("4. Salir");
+			
+			while (true) {
+				try{
+					opcion = scan.nextInt(); 
+					break;
+				}
+				catch (Exception e) {
+					System.err.println("Por favor ingrese una opcion valida");
+					scan.next();
+					continue;
+				}
+			}
+			switch (opcion) {
+				case 1:
+					String pagina = "";
+					while (true) {
+						System.out.println("Que pagina web desea visitar?");
+						try{
+							pagina = scan.next();
+						}
+						catch (Exception e) {
+						System.err.println("Por favor ingrese una opcion valida");
+						scan.next();
+						continue;
+						}
+					}
+					AbrirPagina(pagina);
+					break;
+				case 2:
+					playVideo();
+					break;
+				case 3:
+					String videojuego = "";
+					while (true) {
+						System.out.println("Que videojuego desea jugar?");
+						try{
+							videojuego = scan.next();
+						}
+						catch (Exception e) {
+						System.err.println("Por favor ingrese una opcion valida");
+						scan.next();
+						continue;
+						}
+					}
+					LetsPlayAGame(videojuego);
+					break;
+				case 4:
+					System.out.println("Se ha dejado de interactuar con el Computador Personal");
+					break;	
+			}
+		}
     }
 
     @Override
