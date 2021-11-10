@@ -1,21 +1,29 @@
-
+/******************************************************************
+Device.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que representa un telefono fijo vendido por la tienda, hereda de la clase abstracta Device e implementa el interfaz Call.
+******************************************************************/
 import java.util.Scanner;
 
 
 
 public class TelFijo extends Device implements Call{
     private Scanner scan = new Scanner(System.in);
+	
+	//constructor
     public TelFijo(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
 
-    
+    //Override al metodo Llamar de la interfaz Call.
     @Override
     public String Llamar(String number){
             String n = ("Se esta llamando al numero: " + number);
             return n;	
     }
-
+	
+	//Override al metodo Interact de la Clase Device.
     @Override
     public void Interact() {
 		int opcion = 0;

@@ -1,20 +1,29 @@
-
+/******************************************************************
+TelCel.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que representa un telefono celular vendido por la tienda, hereda de la clase abstracta TelFijo e implementa el interfaz Portable.
+******************************************************************/
 import java.util.Scanner;
 
 
 
 public class TelCel extends TelFijo implements Portable{
     private Scanner scan = new Scanner(System.in);
+	
+	//constructor
     public TelCel(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
 
+	//Override al metodo mover de la interfaz Portable.
     @Override
     public String mover(){
             String n = ("El telefono " + NAME + " ha sido movido.");
             return n;	
     }
 
+	//Override al metodo Interact de la Clase Device.
     @Override
     public void Interact() {
         int opcion = 0;

@@ -1,21 +1,29 @@
-
+/******************************************************************
+PCLap.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que representa un Computador Personal Laptop vendido por la tienda, hereda de la clase PCDes e implementa el interfaz Portable.
+******************************************************************/
 import java.util.Scanner;
 
 
 public class PCLap extends PCDes implements Portable{
     private Scanner scan = new Scanner(System.in);
+	
+	//constructor
     public PCLap(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
 	
 
-	
+	//Override al metodo mover de la interfaz Portable.
     @Override
     public String mover(){
             String n = ("El computador personal " + NAME + " ha sido movido.");
             return n;	
     }
 	
+	//Override al metodo Interact de la Clase Device.
 	@Override
     public void Interact() {
         int opcion = 0;

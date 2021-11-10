@@ -1,32 +1,42 @@
-
+/******************************************************************
+PCDes.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que representa una computadora personal desktop vendido por la tienda, hereda de la clase abstracta Device e implementa las interfaces Web, Media y Gaming.
+******************************************************************/
 import java.util.Scanner;
+
 
 public class PCDes extends Device implements Web,Media,Gaming{
     private Scanner scan = new Scanner(System.in);
+	
+	//constructor
     public PCDes(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
 	
 
-	
+	//Override al metodo AbirPagina de la interfaz Web.
         @Override
 	public String AbrirPagina(String a){
 		String n = ("El computador personal " + NAME + " esta mostrando la direccion web " + a + ".");
 		return n;	
 	}
 
+	//Override al metodo playVideo de la interfaz Media.
         @Override
 	public String playVideo(){
 		String n = ("El computador personal " + NAME + " esta mostrando un video.");
 		return n;	
 	}
-	
+	//Override al metodo LetsPlayAGame de la interfaz Gaming.
         @Override
 	public String LetsPlayAGame(String a){
             String n = ("El usuario utiliza el computador personal " + NAME + " para jugar el videojuego "+ a + ".");
             return n;
 	}
 
+	//Override al metodo Interact de la Clase Device.
     @Override
     public void Interact() {
         int opcion = 0;
@@ -93,8 +103,9 @@ public class PCDes extends Device implements Web,Media,Gaming{
 		}
     }
 
+	//Override al metodo tomarFotos de la interfaz Media.
     @Override
     public String tomarFotos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }

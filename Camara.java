@@ -1,30 +1,42 @@
-
+/******************************************************************
+Camara.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que representa una Camara Fotografica vendida por la tienda, hereda de la clase abstracta Device e implementa las interfaces Portable y Media.
+******************************************************************/
 import java.util.Scanner;
 
 
 public class Camara extends Device implements Portable,Media{
     private Scanner scan = new Scanner(System.in);
+	
+	//constructor
     public Camara(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }	
+	
+	//Override al metodo mover de la interfaz Portable.
     @Override
     public String mover(){
             String n = ("La camara " + NAME + " ha sido movido.");
             return n;	
     }
 
+	//Override al metodo tomarFotos de la interfaz Media.
     @Override
     public String tomarFotos(){
             String n = ("La camara " + NAME + " ha tomado una foto.");
             return n;	
     }
 
+	//Override al metodo playVideo de la interfaz Media.
     @Override
     public String playVideo(){
             String n = ("La camara " + NAME + " esta mostrando un video.");
             return n;	
     }
 
+	//Override al metodo Interact de la Clase Device.
     @Override
     public void Interact() {
          int opcion = 0;

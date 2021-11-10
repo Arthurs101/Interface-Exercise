@@ -1,4 +1,9 @@
-
+/******************************************************************
+Database.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que lee el archivo json con los datos de las tiendas y sus inventarios.
+******************************************************************/
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,11 +13,14 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class Database{
+	
+	//Variables de clase
     private final String directory;
     public Database(String directory) {
         this.directory = directory;
     }
     
+	//Metodo que lee un archivo JSon y guarda en un ArrayList
     public ArrayList<Store> read() throws IOException{
         ArrayList<Store> Stores  = new ArrayList<>();
         JSONParser Stored = new JSONParser();//lector del arvhivo JSON

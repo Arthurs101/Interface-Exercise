@@ -1,4 +1,9 @@
-
+/******************************************************************
+Device.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase abstracta que modela todos los dispositivos vendidos por las tiendas.
+******************************************************************/
 public abstract class Device {
     protected double price;
     protected String serialNumber;
@@ -17,7 +22,7 @@ public abstract class Device {
         this.deviceType = deviceType;
         this.NAME = Name;
     }
-    
+    //Metodos Getters que al ser ejecutados regresan variables de la clase
     public String[] getData(){
         String[] me = new  String[6];
         me[0] = NAME;
@@ -37,7 +42,6 @@ public abstract class Device {
         return NAME;
     }
     
-    public abstract void Interact();
     
     public double getPrecio() {
     return price;
@@ -50,6 +54,8 @@ public abstract class Device {
 	public String getMarca() {
         return manufacturer;
     }
+	//Metodo abstracto que representa la interaccion del usuario con un dispositivo
+	public abstract void Interact();
 	
 	
     

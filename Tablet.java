@@ -1,39 +1,50 @@
-
+/******************************************************************
+Tablet.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que representa un Tablet vendido por la tienda, hereda de la clase abstracta Device e implementa las interfaces Web, Media y Portable.
+******************************************************************/
 import java.util.Scanner;
 
 
 public class Tablet extends Device implements Web,Media,Portable{
     private Scanner scan = new Scanner(System.in);
+	
+	//constructor
     public Tablet(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
 	
 
-	
+	//Override al metodo AbirPagina de la interfaz Web.
     @Override
     public String AbrirPagina(String a){
             String n = ("La tablet " + NAME + " esta mostrando la direccion web " + a + ".");
             return n;	
     }
 
+	//Override al metodo tomarFotos de la interfaz Media.
     @Override
     public String tomarFotos(){
             String n = ("La tablet " + NAME + " ha tomado una foto.");
             return n;	
     }
 
+	//Override al metodo playVideo de la interfaz Media.
     @Override
     public String playVideo(){
             String n = ("La tablet " + NAME + " esta mostrando un video.");
             return n;	
     }
 
+	//Override al metodo mover de la interfaz Portable.
     @Override
     public String mover(){
             String n = ("La tablet " + NAME + " ha sido movido.");
             return n;	
     }
 
+	//Override al metodo Interact de la Clase Device.
     @Override
     public void Interact() {
         int opcion = 0;

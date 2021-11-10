@@ -1,11 +1,20 @@
-
+/******************************************************************
+Store.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase que representa una tienda de Electronica Latinoamericana.
+******************************************************************/
 import java.util.ArrayList;
 public class Store{
+	
+	//Variables de clase
 	private String name;
 	private String adress;
 	private String country;
 	private String city;
 	private ArrayList<Device> inventario;
+	
+	//constructor
 	public Store(String name, String adress, String country, String city, ArrayList<Device> productos){
             this.name = name;
             this.adress = adress;
@@ -14,6 +23,7 @@ public class Store{
             this.inventario = productos;
 	}
 	
+	//Metodos getter que regresan las variables de la clase
 	public String getName(){
 		return name;
 	}

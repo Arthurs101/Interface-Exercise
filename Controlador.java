@@ -1,4 +1,9 @@
-
+/******************************************************************
+Controlador.java
+Autor: Adrian Fulladolsa Palma y Arturo Heberto Argueta Avila
+Última modificación: 2021-11-09
+Clase encargada de realizar las funciones del programa.
+******************************************************************/
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
