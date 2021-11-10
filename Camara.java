@@ -1,6 +1,9 @@
 
-public class Camara extends Device implements Portable,Media{
+import java.util.Scanner;
 
+
+public class Camara extends Device implements Portable,Media{
+    private Scanner scan = new Scanner(System.in);
     public Camara(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }	
@@ -23,8 +26,8 @@ public class Camara extends Device implements Portable,Media{
     }
 
     @Override
-    public String Interact() {
-         String opcion = 0;
+    public void Interact() {
+         int opcion = 0;
         while (opcion != 4){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con Camara fotografica");
@@ -47,13 +50,13 @@ public class Camara extends Device implements Portable,Media{
 			}
 			switch (opcion) {
 				case 1:
-					tomarFotos();
+					System.out.println(tomarFotos());
 					break;
 				case 2:
-					playVideo();
+					 System.out.println(playVideo());
 					break;
 				case 3:
-					mover();
+					System.out.println(mover());
 					break;
 				case 4:
 					System.out.println("Se ha dejado de interactuar con el Computador Personal");

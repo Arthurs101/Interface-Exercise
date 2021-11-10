@@ -1,6 +1,9 @@
 
-public class SPhone extends TelCel implements Media,Web{
+import java.util.Scanner;
 
+
+public class SPhone extends TelCel implements Media,Web{
+    private Scanner scan = new Scanner(System.in);
     public SPhone(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
@@ -24,8 +27,8 @@ public class SPhone extends TelCel implements Media,Web{
     }
 	
 	@Override
-    public String Interact() {
-        String opcion = 0;
+    public void Interact() {
+        int opcion = 0;
         while (opcion != 6){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con Smartphone");
@@ -55,6 +58,8 @@ public class SPhone extends TelCel implements Media,Web{
 						System.out.println("A que numbero desea llamar?");
 						try{
 							number = scan.next();
+                                                       
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -62,31 +67,32 @@ public class SPhone extends TelCel implements Media,Web{
 						continue;
 						}
 					}
-					Llamar(number);
+                                        System.out.println(Llamar(number));
 					break;
 				case 2:
-					mover();
+                                        System.out.println(mover());
 					break;
 				case 3:
-					tomarFotos();
+                                        System.out.println(tomarFotos());
 					break;
 				case 4:
-					playVideo();
+                                        System.out.println(playVideo());
 					break;
 				case 5:
 					String pagina = "";
 					while (true) {
 						System.out.println("Que pagina web desea visitar?");
 						try{
-							pagina = scan.next();
-						}
-						catch (Exception e) {
+							pagina = scan.nextLine();
+                                                        
+                                                        break;
+                                                }catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
 						scan.next();
 						continue;
 						}
 					}
-					AbrirPagina(pagina);
+					System.out.println(AbrirPagina(pagina));
 					break;
 				case 6:
 					System.out.println("Se ha dejado de interactuar con el Smartphone");

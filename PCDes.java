@@ -1,7 +1,8 @@
 
+import java.util.Scanner;
 
 public class PCDes extends Device implements Web,Media,Gaming{
-
+    private Scanner scan = new Scanner(System.in);
     public PCDes(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
@@ -27,8 +28,8 @@ public class PCDes extends Device implements Web,Media,Gaming{
 	}
 
     @Override
-    public String Interact() {
-        String opcion = 0;
+    public void Interact() {
+        int opcion = 0;
         while (opcion != 4){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con Computador Personal");
@@ -56,6 +57,7 @@ public class PCDes extends Device implements Web,Media,Gaming{
 						System.out.println("Que pagina web desea visitar?");
 						try{
 							pagina = scan.next();
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -63,10 +65,10 @@ public class PCDes extends Device implements Web,Media,Gaming{
 						continue;
 						}
 					}
-					AbrirPagina(pagina);
+					System.out.println(AbrirPagina(pagina));
 					break;
 				case 2:
-					playVideo();
+					System.out.println(playVideo());
 					break;
 				case 3:
 					String videojuego = "";
@@ -74,6 +76,7 @@ public class PCDes extends Device implements Web,Media,Gaming{
 						System.out.println("Que videojuego desea jugar?");
 						try{
 							videojuego = scan.next();
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -81,7 +84,7 @@ public class PCDes extends Device implements Web,Media,Gaming{
 						continue;
 						}
 					}
-					LetsPlayAGame(videojuego);
+					System.out.println(LetsPlayAGame(videojuego));
 					break;
 				case 4:
 					System.out.println("Se ha dejado de interactuar con el Computador Personal");

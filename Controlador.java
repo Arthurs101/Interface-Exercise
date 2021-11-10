@@ -108,7 +108,7 @@ public class Controlador{
                         int item_index = dp.selectItem(searched) -1;
                         try {
                             Device device_interacting = searched.get(item_index);
-                            //dp.show(device_interacting.Interact());
+                            device_interacting.Interact();//interactuar con el dispositivo
                             boolean flag = true;//preguntar si desea añadir el artículo, si no coloca algo válido preguntarle de nuevo
                             while(flag){
                                 try{

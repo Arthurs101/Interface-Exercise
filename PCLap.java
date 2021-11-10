@@ -1,6 +1,9 @@
 
-public class PCLap extends PCDes implements Portable{
+import java.util.Scanner;
 
+
+public class PCLap extends PCDes implements Portable{
+    private Scanner scan = new Scanner(System.in);
     public PCLap(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
@@ -14,8 +17,8 @@ public class PCLap extends PCDes implements Portable{
     }
 	
 	@Override
-    public String Interact() {
-        String opcion = 0;
+    public void Interact() {
+        int opcion = 0;
         while (opcion != 5){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con Computador Personal");
@@ -44,6 +47,7 @@ public class PCLap extends PCDes implements Portable{
 						System.out.println("Que pagina web desea visitar?");
 						try{
 							pagina = scan.next();
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -51,10 +55,10 @@ public class PCLap extends PCDes implements Portable{
 						continue;
 						}
 					}
-					AbrirPagina(pagina);
+					System.out.println(AbrirPagina(pagina));
 					break;
 				case 2:
-					playVideo();
+					System.out.println(playVideo());
 					break;
 				case 3:
 					String videojuego = "";
@@ -62,6 +66,7 @@ public class PCLap extends PCDes implements Portable{
 						System.out.println("Que videojuego desea jugar?");
 						try{
 							videojuego = scan.next();
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -69,10 +74,10 @@ public class PCLap extends PCDes implements Portable{
 						continue;
 						}
 					}
-					LetsPlayAGame(videojuego);
+                                        System.out.println(LetsPlayAGame(videojuego));
 					break;
 				case 4:
-					mover();
+					System.out.println(mover());
 					break;
 				case 5:
 					System.out.println("Se ha dejado de interactuar con el Computador Personal");

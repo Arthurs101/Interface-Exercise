@@ -1,7 +1,10 @@
 
+import java.util.Scanner;
+
+
 
 public class TelCel extends TelFijo implements Portable{
-
+    private Scanner scan = new Scanner(System.in);
     public TelCel(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
@@ -13,8 +16,8 @@ public class TelCel extends TelFijo implements Portable{
     }
 
     @Override
-    public String Interact() {
-        String opcion = 0;
+    public void Interact() {
+        int opcion = 0;
         while (opcion != 3){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con Telefono Celular");
@@ -41,6 +44,7 @@ public class TelCel extends TelFijo implements Portable{
 						System.out.println("A que numero desea llamar?");
 						try{
 							number = scan.next();
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -48,10 +52,11 @@ public class TelCel extends TelFijo implements Portable{
 						continue;
 						}
 					}
-					Llamar(number);
+					System.out.println(Llamar(number));
+                                        
 					break;
 				case 2:
-					mover();
+					System.out.println(mover());
 					break;
 				case 3:
 					System.out.println("Se ha dejado de interactuar con el Telefono Celular");

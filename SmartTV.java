@@ -1,6 +1,9 @@
 
-public class SmartTV extends Device implements Web,Media{
+import java.util.Scanner;
 
+
+public class SmartTV extends Device implements Web,Media{
+    private Scanner scan = new Scanner(System.in);
     public SmartTV(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
@@ -24,8 +27,8 @@ public class SmartTV extends Device implements Web,Media{
 	}
 
     @Override
-    public String Interact() {
-        String opcion = 0;
+    public void Interact() {
+        int opcion = 0;
         while (opcion != 3){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con SmartTV");
@@ -52,6 +55,7 @@ public class SmartTV extends Device implements Web,Media{
 						System.out.println("Que pagina web desea visitar?");
 						try{
 							pagina = scan.next();
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -59,10 +63,10 @@ public class SmartTV extends Device implements Web,Media{
 						continue;
 						}
 					}
-					AbrirPagina(pagina);
+					System.out.println(AbrirPagina(pagina));
 					break;
 				case 2:
-					playVideo();
+					System.out.println(playVideo());
 					break;
 				case 3:
 					System.out.println("Se ha dejado de interactuar con el SmartTV");

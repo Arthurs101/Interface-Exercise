@@ -1,7 +1,10 @@
 
+import java.util.Scanner;
+
+
 
 public class TelFijo extends Device implements Call{
-
+    private Scanner scan = new Scanner(System.in);
     public TelFijo(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
@@ -14,8 +17,8 @@ public class TelFijo extends Device implements Call{
     }
 
     @Override
-    public String Interact() {
-		String opcion = 0;
+    public void Interact() {
+		int opcion = 0;
         while (opcion != 2){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con Telefono Fijo");
@@ -40,7 +43,9 @@ public class TelFijo extends Device implements Call{
 					while (true) {
 						System.out.println("A que numero desea llamar?");
 						try{
-							number = scan.next();
+							number = scan.nextLine();
+                                                        
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -48,7 +53,7 @@ public class TelFijo extends Device implements Call{
 						continue;
 						}
 					}
-					Llamar(number);
+					System.out.println(Llamar(number));
 					break;
 				case 2:
 					System.out.println("Se ha dejado de interactuar con el Telefono Fijo");

@@ -37,7 +37,7 @@ public abstract class Device {
         return NAME;
     }
     
-    public abstract String Interact();
+    public abstract void Interact();
     
     public double getPrecio() {
     return price;

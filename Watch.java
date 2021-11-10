@@ -1,7 +1,10 @@
 
+import java.util.Scanner;
 
-public class Watch extends Device implements Call,Media,Portable{
 
+
+public class Watch extends Device implements Call,Media,Portable,Web{
+    private Scanner scan = new Scanner(System.in);
     public Watch(double price, String serialNumber, String manufacturer, String productionDate, String markerAR, String deviceType, String Name) {
         super(price, serialNumber, manufacturer, productionDate, markerAR, deviceType, Name);
     }
@@ -33,8 +36,8 @@ public class Watch extends Device implements Call,Media,Portable{
     }
 
     @Override
-    public String Interact() {
-        String opcion = 0;
+    public void Interact() {
+        int opcion = 0;
         while (opcion != 5){ 
 			System.out.println("");
 			System.out.println("Interacciones posibles con SmartWatch");
@@ -66,6 +69,7 @@ public class Watch extends Device implements Call,Media,Portable{
 						System.out.println("Que pagina web desea visitar?");
 						try{
 							pagina = scan.next();
+                                                        break;
 						}
 						catch (Exception e) {
 						System.err.println("Por favor ingrese una opcion valida");
@@ -73,19 +77,24 @@ public class Watch extends Device implements Call,Media,Portable{
 						continue;
 						}
 					}
-					AbrirPagina(pagina);
+                                        System.out.println(AbrirPagina(pagina));
 					break;
 				case 3:
-					playVideo();
+                                        System.out.println(playVideo());
 					break;
 				case 4:
-					mover();
+                                        System.out.println(mover());
 					break;
 				case 5:
 					System.out.println("Se ha dejado de interactuar con el SmartWatch");
 					break;	
 			}
 		}
+    }
+
+    @Override
+    public String AbrirPagina(String a) {
+        return "Abriendo página web: " + a; //To change body of generated methods, choose Tools | Templates.
     }
 
  
